@@ -65,4 +65,6 @@ public class BubbleSort {
 * 1. In-Place Algorithm : No new array dependent on N is created
 * 2. Quadratic Complexity ( inner loop does less work but an approximation is still O(n^2)
 * 3. As a result of quadratic complexity the algorithm degrades quickly
+* 4. In every iteration we BUBBLE the number to the end of the array hence the name
+* 5. It's also a Stable Sort because we don't change the order of the duplicates ( i<i+-1 condition )
  */
