@@ -6,17 +6,42 @@ public class BubbleSort {
 
         int[] intArray = {20, 35, -15 , 7, 55, 1, -22};
 
+//        bubbleAscending(intArray);
+//        bubbleDescending(intArray);
+        sortAscendingFromLeftSide(intArray);
+        print(intArray);
+  }
 
+  public static void sortAscendingFromLeftSide(int[]intArray){
+        for(int lastSortedIndex=0;lastSortedIndex<intArray.length;lastSortedIndex++){
+            for(int i= intArray.length-1;i>lastSortedIndex;i--) {
+                if(intArray[i]<intArray[i-1]){
+                    swap(intArray,i,i-1);
+                }
+            }
+        }
+  }
+
+    public static void bubbleAscending(int[]intArray){
+        //sort ascending
         for(int lastUnsortedIndex = intArray.length-1;lastUnsortedIndex>0;lastUnsortedIndex--){
             for(int i = 0; i<lastUnsortedIndex;i++){
                 if(intArray[i]>intArray[i+1])
                     swap(intArray,i,i+1);
             }
         }
-
-        print(intArray);
-
     }
+
+    public static void bubbleDescending(int[]intArray){
+        //sort descending
+        for(int lastUnsortedIndex = intArray.length-1;lastUnsortedIndex>0;lastUnsortedIndex--){
+            for(int i = 0; i<lastUnsortedIndex;i++){
+                if(intArray[i]<intArray[i+1])
+                    swap(intArray,i,i+1);
+            }
+        }
+    }
+
 
     public static void print(int[] arr){
         System.out.print("[");
