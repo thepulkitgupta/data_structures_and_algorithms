@@ -40,13 +40,13 @@ public class SelectionSort {
     }
 
     private static void sortLeftToRightDescending(int[] intArray) {
-        for(int lastSortedIndex = 0; lastSortedIndex<intArray.length-1;lastSortedIndex++){
+        for(int firstUnsortedIndex = 0; firstUnsortedIndex<intArray.length-1;firstUnsortedIndex++){
             int largest=intArray.length-1;
-            for(int i= intArray.length -2;i>=lastSortedIndex;i--){
+            for(int i= intArray.length -2;i>=firstUnsortedIndex;i--){
                 if(intArray[i]>intArray[largest])
                    largest=i;
             }
-            swap(intArray,largest,lastSortedIndex);
+            swap(intArray,largest,firstUnsortedIndex);
         }
     }
 }

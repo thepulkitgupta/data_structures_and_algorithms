@@ -16,8 +16,8 @@ public class BubbleSort {
   }
 
   public static void sortAscendingFromLeftSide(int[]intArray){
-        for(int lastSortedIndex=0;lastSortedIndex<intArray.length;lastSortedIndex++){
-            for(int i= intArray.length-1;i>lastSortedIndex;i--) {
+        for(int firstUnsortedIndex=0;firstUnsortedIndex<intArray.length;firstUnsortedIndex++){
+            for(int i= intArray.length-1;i>firstUnsortedIndex;i--) {
                 if(intArray[i]<intArray[i-1]){
                     swap(intArray,i,i-1);
                 }
