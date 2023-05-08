@@ -53,7 +53,7 @@ public class MergeSort {
         while(i< mid && j < end){
             //so here in the check '=' ensure that the sort is stable because if the element is equal
             // then we move that element to the temp array first from the left side
-            temp[tempIndex++]=input[i] < input[j] ? input[i++] : input[j++];
+            temp[tempIndex++]=input[i] <= input[j] ? input[i++] : input[j++];
         }
 
         //once the above merging is done it's time to copy over the pending elements
