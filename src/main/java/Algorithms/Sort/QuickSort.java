@@ -51,7 +51,7 @@ public class QuickSort {
 }
 
 /* NOTES
-* 1. O(n*log(n)): worset case it can be quadratic but in average it is O(n*log(n)) and is generally better than merge
+* 1. O(n*log(n)): worst case it can be quadratic but in average it is O(n*log(n)) and is generally better than merge
 * 2. In-Place algorithm
 * 3. Unstable algorithm
-* */
+*/
