@@ -1,4 +1,4 @@
-package Algorithms.Sort;
+package Algorithms.Concepts;
 
 public class Recursion {
 
