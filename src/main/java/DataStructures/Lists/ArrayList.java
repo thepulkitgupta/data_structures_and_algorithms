@@ -55,3 +55,11 @@ public class ArrayList {
 
     }
 }
+
+/* NOTES
+* 1. ArrayList is good for random access and iterations over the array or list
+* 2. ArrayList is backed by an array ( also called backing array )
+* 3. Add element at an index and remove elements is not efficient as we need to copy and fill the gaps
+* 4. As ArrayList is backed by an array it has the same problems as arrays
+* 5. If we have the index then random access is in constant time otherwise it will be in linear time
+* */
