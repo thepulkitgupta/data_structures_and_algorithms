@@ -9,7 +9,15 @@ public class RadixSort {
 
         radixSort(intArray,10,4);
 
+
         print(intArray);
+
+        String[] arr = {"bcdef", "dbaqc","abcde","omadd", "bbbbb"};
+
+        stringRadixSort(arr,26,5);
+
+        print(arr);
+
     }
 
     public static void radixSort(int[]  input, int radix, int width){
@@ -51,6 +59,41 @@ public class RadixSort {
     private static int getDigit(int value, int position, int radix) {
         return value / (int) Math.pow(radix,position) % radix;
     }
+
+
+    public static void stringRadixSort(String [] input, int radix, int width){
+        for(int i=width;i>0;i--){
+            radixStringSort(input,radix,i-1);
+        }
+    }
+
+    private static void radixStringSort(String[] input, int radix, int position) {
+
+        int [] countArray = new int[radix];
+
+        for(int j=0;j<input.length;j++){
+            countArray[getCharacter(input[j],position)]++;
+        }
+
+        for(int j=1;j< countArray.length;j++){
+            countArray[j]+=countArray[j-1];
+        }
+
+        String []tempArray = new String[input.length];
+
+        for(int k=input.length-1;k>=0;k--){
+            tempArray[--countArray[getCharacter(input[k],position)]]=input[k];
+        }
+
+        for(int l=0;l<input.length;l++){
+            input[l]=tempArray[l];
+        }
+    }
+
+    private static int getCharacter(String s, int position) {
+        return s.charAt(position) - 'a';
+    }
+
 }
 /* NOTES
 * 1. Not In-Place Algorithm
