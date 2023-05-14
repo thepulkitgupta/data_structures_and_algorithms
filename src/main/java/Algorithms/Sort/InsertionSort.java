@@ -9,8 +9,10 @@ public class InsertionSort {
 
 //        sortAscending(intArray);
 //          sortDescending(intArray);
-        rightToLeftSortAscending(intArray);
+//        rightToLeftSortAscending(intArray);
+        recursiveInsertionSort(intArray,7);
         print(intArray);
+
     }
 
     public static void sortAscending(int[] intArray){
@@ -23,6 +25,33 @@ public class InsertionSort {
             intArray[i]=newElement;
         }
     }
+
+    public static void recursiveInsertionSort(int []input, int numOfitems){
+        //base case
+        if(numOfitems < 2)
+            return;
+
+        recursiveInsertionSort(input,numOfitems-1);
+
+        int newElement=input[numOfitems-1];
+
+        input[moveElementsRecursively(input,newElement,numOfitems-1)]=newElement;
+
+        print(input);
+
+    }
+
+    public static int moveElementsRecursively(int[]input, int element, int firstUnsortedIndex){
+        if(firstUnsortedIndex>0 && input[firstUnsortedIndex-1] > element){
+            input[firstUnsortedIndex]=input[firstUnsortedIndex-1];
+        }
+        else {
+            return firstUnsortedIndex;
+        }
+        return moveElementsRecursively(input,element,--firstUnsortedIndex);
+
+    }
+
     public static void sortDescending(int[] intArray){
         for(int firstUnsortedIndex=1;firstUnsortedIndex<intArray.length;firstUnsortedIndex++){
             int newElement=intArray[firstUnsortedIndex];
