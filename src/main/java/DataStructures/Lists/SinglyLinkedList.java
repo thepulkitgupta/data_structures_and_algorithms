@@ -1,9 +1,9 @@
 package DataStructures.Lists;
 
 import Helpers.Employee;
-import Helpers.EmployeeLinkedList;
+import Helpers.EmployeeSinglyLinkedList;
 
-public class LinkedList {
+public class SinglyLinkedList {
 
     public static void main(String[]args) {
         Employee empl1 = new Employee("Jane", "Jones", 123);
@@ -11,22 +11,22 @@ public class LinkedList {
         Employee empl3 = new Employee("Mary", "Smith", 22);
         Employee empl4 = new Employee("Mike", "Wilson", 3245);
 
-        EmployeeLinkedList employeeLinkedList = new EmployeeLinkedList();
+        EmployeeSinglyLinkedList employeeSinglyLinkedList = new EmployeeSinglyLinkedList();
 
-        System.out.println(employeeLinkedList.isEmpty());
+        System.out.println(employeeSinglyLinkedList.isEmpty());
 
-        employeeLinkedList.addToFront(empl1);
-        employeeLinkedList.addToFront(empl2);
-        employeeLinkedList.addToFront(empl3);
-        employeeLinkedList.addToFront(empl4);
+        employeeSinglyLinkedList.addToFront(empl1);
+        employeeSinglyLinkedList.addToFront(empl2);
+        employeeSinglyLinkedList.addToFront(empl3);
+        employeeSinglyLinkedList.addToFront(empl4);
 
-        System.out.println(employeeLinkedList.getSize());
+        System.out.println(employeeSinglyLinkedList.getSize());
 
-        employeeLinkedList.printList();
+        employeeSinglyLinkedList.printList();
 
-        employeeLinkedList.removeFromFront();
-        System.out.println(employeeLinkedList.getSize());
-        employeeLinkedList.printList();
+        employeeSinglyLinkedList.removeFromFront();
+        System.out.println(employeeSinglyLinkedList.getSize());
+        employeeSinglyLinkedList.printList();
 
     }
 }

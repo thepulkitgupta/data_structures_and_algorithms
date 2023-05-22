@@ -1,6 +1,6 @@
 package Helpers;
 
-public class EmployeeLinkedList {
+public class EmployeeSinglyLinkedList {
 
     private EmployeeNode head;
 
@@ -36,7 +36,7 @@ public class EmployeeLinkedList {
         if(isEmpty()){
             return null;
         }
-                    EmployeeNode removedNode= head;
+        EmployeeNode removedNode= head;
         head=head.getNext();
         size--;
         //optional step to remove the next reference of removed node
