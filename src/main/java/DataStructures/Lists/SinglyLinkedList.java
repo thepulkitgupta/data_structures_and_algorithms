@@ -2,6 +2,7 @@ package DataStructures.Lists;
 
 import Helpers.Employee;
 import Helpers.EmployeeSinglyLinkedList;
+import Helpers.IntegerLinkedList;
 
 public class SinglyLinkedList {
 
@@ -28,7 +29,29 @@ public class SinglyLinkedList {
         System.out.println(employeeSinglyLinkedList.getSize());
         employeeSinglyLinkedList.printList();
 
+
+        //test the integer linked list sorted
+        testIntegerLinkedList();
     }
+
+    public static void testIntegerLinkedList(){
+
+                Integer one = 1;
+                Integer two = 2;
+                Integer three = 3;
+                Integer four = 4;
+
+                IntegerLinkedList list = new IntegerLinkedList();
+                list.insertSorted(three);
+                list.printList();
+                list.insertSorted(two);
+                list.printList();
+                list.insertSorted(one);
+                list.printList();
+                list.insertSorted(four);
+                list.printList();
+            }
+
 }
 
 

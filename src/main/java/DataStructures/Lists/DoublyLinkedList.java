@@ -36,7 +36,15 @@ public class DoublyLinkedList {
         employeeDoublyLinkedList.printList();
         System.out.println(employeeDoublyLinkedList.getSize());
 
+        //test out the addBefore method
+        System.out.println(employeeDoublyLinkedList.addBefore(new Employee("James","Bond",007),empl3));
+        employeeDoublyLinkedList.printList();
 
+        System.out.println(employeeDoublyLinkedList.addBefore(new Employee("Pulkit","Bond",8),empl2));
+        employeeDoublyLinkedList.printList();
+
+        System.out.println(employeeDoublyLinkedList.addBefore(new Employee("Tikup","Bond",9),empl1));
+        employeeDoublyLinkedList.printList();
     }
 }
 
