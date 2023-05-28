@@ -1,8 +1,8 @@
 package DataStructures.Lists;
 
-import Helpers.Employee;
 import Helpers.EmployeeSinglyLinkedList;
 import Helpers.IntegerLinkedList;
+import Helpers.Employee;
 
 public class SinglyLinkedList {
 

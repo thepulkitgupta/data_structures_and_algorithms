@@ -1,5 +1,8 @@
 package Helpers;
 
+import Helpers.Employee;
+import Helpers.EmployeeNode;
+
 public class EmployeeSinglyLinkedList {
 
     private EmployeeNode head;

@@ -4,7 +4,7 @@ import Helpers.Employee;
 
 import java.util.List;
 
-public class ArrayList {
+public class ArrayListJDK {
     public static void main(String[]args){
 
         List<Employee> employeeList = new java.util.ArrayList<>();

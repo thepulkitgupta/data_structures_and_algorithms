@@ -1,5 +1,7 @@
 package Helpers;
 
+import Helpers.IntegerNode;
+
 public class IntegerLinkedList {
 
     private IntegerNode head;
