@@ -10,21 +10,34 @@ public class HashTables {
         Employee johnDoe = new Employee("John", "Doe", 4567);
         Employee marySmith = new Employee("Mary", "Smith", 22);
         Employee mikeWilson = new Employee("Mike", "Wilson", 3245);
-        Employee billEnd = new Employee("bill","end",78);
+        Employee billEnd = new Employee("Bill","End",78);
+        Employee donJohnson = new Employee("Don", "Johnson", 69);
 
-        SimpleHashTable hashTable = new SimpleHashTable();
+//        SimpleHashTable hashTable = new SimpleHashTable();
+        ChainedHashTable hashTable = new ChainedHashTable();
 
         hashTable.put("Jones", janeJones);
         hashTable.put("Doe", johnDoe);
         hashTable.put("Wilson", mikeWilson);
+        hashTable.put("Johnson", donJohnson);
         hashTable.put("Smith", marySmith);
 
-//        hashTable.printHashTable();
+        hashTable.printHashTable();
 
-        System.out.println("Retrieve key Wilson : " + hashTable.get("Wilson"));
+//        System.out.println("Retrieve key Wilson : " + hashTable.get("Wilson"));
+//
+//        //this call will fail until we handle the get method to accommodate for linear probing
+//        System.out.println("Retrieve key Smith : " + hashTable.get("Smith"));
+//
+//        hashTable.remove("Wilson");
+//        hashTable.remove("Jones");
+//
+//        hashTable.printHashTable();
+//
+//        System.out.println("Retrieve key Smith : " + hashTable.get("Smith"));
+
+
+
     }
 
 }
-/* NOTES
-1.
-* */
