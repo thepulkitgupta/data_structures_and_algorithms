@@ -1,7 +1,5 @@
 package DataStructures.Trees;
 
-import Helpers.TreeNode;
-
 public class Tree {
 
     private TreeNode root;

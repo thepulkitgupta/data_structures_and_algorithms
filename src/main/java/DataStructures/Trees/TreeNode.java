@@ -1,4 +1,4 @@
-package Helpers;
+package DataStructures.Trees;
 
 public class TreeNode {
 
